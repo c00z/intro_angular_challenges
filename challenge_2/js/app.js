@@ -21,9 +21,11 @@ function ClassController() {
   this.start_date = "11/28/2016"
   this.end_date = "3/03/2017"
   this.daysRemaining = function() {
-    var ms_left = Date.parse(this.end_date) - Date.now();
-    var days_left = Math.floor( ms_left/1000/24/60/60 );
-    return days_left;
+    var sec = Date.parse(this.end_date) - Date.now();
+    console.log(sec);
+    var days = Math.floor( sec/1000/24/60/60);
+    console.log(days);
+    return days;
   }
   }
 
